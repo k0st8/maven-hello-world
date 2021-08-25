@@ -51,7 +51,6 @@ jobs:
         with:
             maven-options: "-DbranchName=hotfix"
             maven-args: "clean install -Ddockerfile.skip -DdockerCompose.skip -Djib.skip"
-            maven-development-version-number: ${parsedVersion.majorVersion}.\${parsedVersion.nextMinorVersion}-SNAPSHOT # not working
             version-minor: true
 
 
