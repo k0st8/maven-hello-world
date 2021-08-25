@@ -27,7 +27,6 @@ jobs:
            GITHUB_WORKSPACE: "/home/runner/work/maven-hello-world/maven-hello-world/my-app"
         
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
-      - name: Checkout of the code
         uses: actions/checkout@v2
         
       - name: Set up JDK 11
