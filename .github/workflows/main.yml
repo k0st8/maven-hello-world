@@ -31,7 +31,7 @@ jobs:
         with:
             maven-args: "clean install -Ddockerfile.skip -DdockerCompose.skip -Djib.skip"
             # maven-development-version-number: ${parsedVersion.majorVersion}.\${parsedVersion.nextMinorVersion}-SNAPSHOT # not working
-            vesion-minor: true
+            version-minor: true
 
 
 
