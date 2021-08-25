@@ -43,7 +43,7 @@ jobs:
           pwd
           echo "Changing directory"
           cd my-app
-          pwd && mvn --batch-mode --update-snapshots verify -X
+          pwd && mvn --batch-mode --update-snapshots verify
 
       # Runs a single command using the runners shell
       #- name: Java Maven release
