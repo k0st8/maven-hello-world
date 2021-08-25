@@ -30,16 +30,17 @@ jobs:
           java-version: '11'
           distribution: 'adopt'
       - name: Build with Maven
-        run: mvn --batch-mode --update-snapshots verify
+        run: |
+          mvn dependency:resolve-plugins
+          mvn --batch-mode --update-snapshots verify
 
       # Runs a single command using the runners shell
-      - name: Java Maven release
-        uses: qcastel/github-actions-maven-release@v1.12.12
-        with:
-            maven-args: "clean install -Ddockerfile.skip -DdockerCompose.skip -Djib.skip"
+      #- name: Java Maven release
+      #  uses: qcastel/github-actions-maven-release@v1.12.12
+      #  with:
+      #      maven-args: "clean install -Ddockerfile.skip -DdockerCompose.skip -Djib.skip"
             # maven-development-version-number: ${parsedVersion.majorVersion}.\${parsedVersion.nextMinorVersion}-SNAPSHOT # not working
-            version-minor: true
-
+      #      version-minor: true
 
 
       # Runs a set of commands using the runners shell
