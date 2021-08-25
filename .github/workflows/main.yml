@@ -38,12 +38,12 @@ jobs:
         run: |
           pwd
           ls -la
+      - name: Build with Maven
+        run: |
+          pwd
           echo "Changing directory"
           cd my-app
-          pwd
-          ls -la
-      - name: Build with Maven
-        run: mvn --batch-mode --update-snapshots verify -X
+          pwd && mvn --batch-mode --update-snapshots verify -X
 
       # Runs a single command using the runners shell
       #- name: Java Maven release
